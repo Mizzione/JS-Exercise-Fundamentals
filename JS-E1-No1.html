@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+    <style>
+        #clock {
+            font-size: 24px;
+            
+            width: 180px;
+            height: 180px;
+            margin: 100px;
+            text-align: center;
+            border: 1px solid black;
+            border-bottom-left-radius: 700px;
+            border-bottom-right-radius: 700px;
+            border-top-right-radius: 700px;
+            border-top-left-radius: 700px
+            
+        }
+    </style>
+    <div id= "clock">
+        <b>
+        <p id="p2"></p>
+        <p id="p1"></p>
+        <p id="p3"></p>
+        </b>
+    </div>
+
+    <script>
+        const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        const d = new Date();
+        let name = month[d.getMonth()];
+        document.getElementById("p2").innerHTML = name;
+        
+        var date = new Date();
+        var date_today = date.getDate();
+        var current_date =  name +" "+ date.getDate();
+        document.getElementById("p2").innerHTML = current_date;
+
+        var date = new Date();
+        var am_pm = "";
+ 
+        if (date.getHours() < 13) {
+            am_pm = "AM";
+            }
+        if (date.getHours() > 12) {
+            am_pm = "PM";
+            }
+        var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds()+" "+am_pm;
+        document.getElementById("p1").innerHTML = current_time;
+
+
+        const day = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]  
+        const dte = new Date();
+        var current_day =  day[dte.getDay()-1];
+        document.getElementById("p3").innerHTML = current_day
+
+    </script>
+</body>
+</html>
+
