@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="car"></p>
+<script>
+    function display_image(src, width, height, alt) 
+    {
+        var a = document.createElement("img");
+        a.src = src;
+        a.width = width;
+        a.height = height;
+        a.alt = alt;
+        document.body.appendChild(a);
+    }
+    display_image('Dodge-Challenger.jpg', 600, 400,'JavaScriptImage');
+</script>
+<style>
+    .div1 {
+            box-sizing: content-box;
+            width: 575px;
+            height: 50px;
+            padding-top: 20px;
+            padding-left: 20px;                 
+            padding-bottom: 50px;
+            border: 1px solid black;
+           }
+</style>
+    <body>
+        <b>
+      <div class="div1">Manufacturer: Dodge <br>
+           Make and Model: Charger 1969 <br>
+           Engine: 318 cu in (5.2 L) V8 <br>
+           Body Style: Sedan
+      <div>
+      </b>
+    </body>    
+</body>
+</html>
